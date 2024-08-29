@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+span {
+    color:  yellow;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+        
+}
+a:hover
+{
+    color: yellow;
+    border: solid yellow 2px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.car {
+    display: flex;
+    gap: 10px;
+    
+}
+button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-now {
+    background-color: transparent; /* Color dorado */
+    color: yellow; /* Texto negro */
+    padding: 10px 20px;
+    border: solid 1px rgb(238, 238, 238);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.order-now i {
+    margin-right: 5px;
+}
+
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 45vh; /* Hace que la sección ocupe toda la altura de la ventana */
+}
+
+.hero-content {
+    z-index: 2; /* Asegura que el h1 esté al frente */
+    position: relative;
+}
+h1 {
+    margin: 0; /* Elimina cualquier margen superior/inferior */
+    font-size: 160px;
+    color: white;
+    font-weight: bold;
+    transform: translateY(-30%); /* Centra verticalmente la imagen */
+    position: relative;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+.hero-image {
+    position: absolute;
+    top: 50%; /* Ajusta la imagen para que esté encima del h1 */
+    transform: translateY(-30%); /* Centra verticalmente la imagen */
+    z-index: 2; /* Coloca la imagen detrás del h1 */
+}
+.hero-image img {
+    width: 800px;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.hero-decor {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.hero-decor img {
+    width: 300px;
+    position: absolute;
+    top: 0%; /* Ajusta la posición vertical */
+    left: -160px;  /* Ajusta la posición horizontal al borde izquierdo */
+    transform: translateY(-10%); /* Centra la imagen verticalmente */
+}
+.hero-cilantro{
+    width: 300px;
+    position: absolute;
+    top: 0%; /* Ajusta la posición vertical */
+    left: -20px;  /* Ajusta la posición horizontal al borde izquierdo */
+    transform: translateY(100%); 
+}
+
+.hero-derecho {
+    width: 300px;
+    position: absolute;
+    top: 0%; /* Ajusta la posición vertical */
+    right: 10px;  /* Ajusta la posición horizontal al borde izquierdo */
+    transform: translateY(50%); 
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+footer {
+    display: none; /* Oculta el footer */
+}
+
+/*RESPONSIVE */
+@media screen and (max-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: absolute;
+        left: 10px; /* Alinea el logo a la izquierda */
+        top: 10px; /* Ajusta la posición vertical según sea necesario */
+    }
+
+    
+    .logo img {
+        height: 70px;
+        margin-right: 10px;
+    }
+
+    .car {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 60px; /* Asegúrate de que haya espacio para el logo */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0; /* Elimina cualquier margen superior/inferior */
+        font-size: 80px;
+        color: white;
+        box-shadow: rgb(2px 2px 0.9 white);        font-weight: bold;
+        transform: translateY(60%); /* Centra verticalmente la imagen */
+        position: relative;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 50%; /* Ajusta la imagen para que esté encima del h1 */
+        transform: translateY(-5%); /* Centra verticalmente la imagen */
+        z-index: 2; /* Coloca la imagen detrás del h1 */
+    }
+    .hero-image img {
+        width: 450px;
+        height: 500px;
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    
+    }
+
+    .hero-decor img {
+        width: 300px;
+        position: absolute;
+        top: 0%; /* Ajusta la posición vertical */
+        left: -160px;  /* Ajusta la posición horizontal al borde izquierdo */
+        transform: translateY(-40%); /* Centra la imagen verticalmente */
+        
+    }
+    .hero-cilantro img {
+        width: 300px;
+        position: absolute;
+        top: 0%; /* Ajusta la posición vertical */
+        left: -20px;  /* Ajusta la posición horizontal al borde izquierdo */
+        transform: translateX(-20%);
+        transform: translateY(180px); 
+
+    }
+    .hero-derecho img{
+        width: 300px;
+        position: absolute;
+        top: 0%; /* Ajusta la posición vertical */
+        right: 10px;  /* Ajusta la posición horizontal al borde izquierdo */
+        transform: translateX(10%); 
+
+    }
+
+    .order-now {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    footer {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .redes img {
+        width: 20px;
+        margin: 0 5px;
+    }
+}
